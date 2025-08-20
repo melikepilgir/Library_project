@@ -35,6 +35,40 @@ API'yi başlatmak için
    Tarayıcıdan:
    http://127.0.0.1:8000/books
 
+ # Endpoints
+1. Get/ Books
+Açıklama: Kütüphanedeki tüm kitapları JSON formatında döndürür.
+Response Örneği:
+[
+  {
+    "title": "Ulysses",
+    "author": "James Joyce",
+    "isbn": "978-0199535675"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "isbn": "978-0451524935"
+  }
+
+2.Post/ Books
+Açıklama: POST isteğinde verilen ISBN numarasıyla Open Library API’den kitap bilgilerini çekip kütüphaneye ekle
+Response Örneği:
+json
+{
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "isbn": "978-0321765723"
+}
+3.Delete/ Books(isbn)
+Açıklama: Belirtilen ISBN numarasına sahip kitabı kütüphaneden siler.
+Response Örneği:
+{
+  "message": "Book with ISBN 978-0321765723 was deleted successfully."
+}
+ 
+
+
  # Dosya Yapısı
  project/
 │
